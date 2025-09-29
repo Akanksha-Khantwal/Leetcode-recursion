@@ -5,6 +5,6 @@ public:
         while (n % 3 == 0) {
             n /= 3;
         }
-        return true;
+        return n==1;
     }
 };
