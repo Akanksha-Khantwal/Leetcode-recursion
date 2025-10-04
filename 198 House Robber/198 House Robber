@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int robhelp(vector<int>nums, int index){
+        int n =nums.size();
+       if(index>= n){
+        return 0;
+       }
+       int robcurrent=nums[index]+robhelp(nums,index+2);
+       int skipcurrent=robhelp(nums,index+1);
+       return max(robcurrent,skipcurrent);
+    }
+
+    int rob(vector<int>& nums) {
+    return robhelp(nums,0);
+    }
+        
+};
